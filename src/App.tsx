@@ -4,10 +4,13 @@ import Square from "./components/largeSquare/Square";
 // css
 import "./App.css";
 
+//constants
+import { BORDER, SIZE } from "./constants";
+
 function App() {
-  const borderLine = "3px solid black";
-  const innerSquareSize = 143.23;
-  const outterSquareSize = 291.78;
+  const { borderLine } = BORDER;
+  const { innerSquareSize, outterSquareSize } = SIZE;
+
   return (
     <>
       <div className="container">
