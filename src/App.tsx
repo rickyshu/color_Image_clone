@@ -26,7 +26,7 @@ function App() {
             <Square bgColor="black">
               <div className="quadrant">
                 <Square bgColor="#001fff" position="absolute" top="50%" left="50%" translate="-50% -50% " zIndex="1" borderBottom={borderLine} borderLeft={borderLine} borderRight={borderLine} borderTop={borderLine} />
-                <Square bgColor="#3fffff" position="absolute" bottom="0" right="0" translate="-0.3% 0%" borderBottom={borderLine} />
+                <Square bgColor="#3fffff" position="absolute" bottom="0" right="0" borderBottom={borderLine} />
               </div>
             </Square>
             <Square bgColor="black">
@@ -39,9 +39,9 @@ function App() {
             </Square>
           </div>
           <div>
-            <Square width={outterSquareSize} height={outterSquareSize} bgColor="#40fe00" position="absolute" top="50%" left="50%" translate="-49.2% -50%" borderTop={borderLine} borderRight={borderLine} borderLeft={borderLine} borderBottom={borderLine}>
+            <Square width={outterSquareSize} height={outterSquareSize} bgColor="#40fe00" position="absolute" top="50%" left="50%" translate="-49% -50%" borderTop={borderLine} borderRight={borderLine} borderLeft={borderLine} borderBottom={borderLine}>
               <div className="quadrant">
-                <Square width={innerSquareSize} height={innerSquareSize} bgColor="#f90000" position="absolute" top="25%" left="0" borderTop={borderLine} borderRight={borderLine} borderBottom={borderLine} />
+                <Square width={innerSquareSize} height={innerSquareSize} bgColor="#f90000" position="absolute" top="25%" left="0" borderTop={borderLine} borderRight={borderLine} />
                 <Square width={innerSquareSize} height={innerSquareSize} bgColor="white" position="absolute" bottom="0" left="24%" borderLeft={borderLine} borderTop={borderLine} borderRight={borderLine} />
               </div>
             </Square>
