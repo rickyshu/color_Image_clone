@@ -1,4 +1,5 @@
 import React from "react";
+// style
 import style from "./Square.module.css";
 
 interface LargeSquareProps {
@@ -19,25 +20,10 @@ interface LargeSquareProps {
   borderBottom?: string;
 }
 
-interface InlineStlye {
-  backgroundColor: string | undefined;
-  width: number | undefined;
-  height: number | undefined;
-  position: "static" | "relative" | "absolute" | undefined;
-  top: string | undefined;
-  bottom: string | undefined;
-  right: string | undefined;
-  left: string | undefined;
-  translate: string | undefined;
-  zIndex: string | undefined;
-  borderRight: string | undefined;
-  borderLeft: string | undefined;
-  borderTop: string | undefined;
-  borderBottom: string | undefined;
-}
+type testinLineStyle = React.CSSProperties;
 
 const LargeSquare: React.FC<LargeSquareProps> = ({ children, bgColor, width, height, zIndex, translate, position, top, bottom, right, left, borderRight, borderLeft, borderBottom, borderTop }) => {
-  const inlineStyle: InlineStlye = {
+  const inlineStyle: testinLineStyle = {
     backgroundColor: bgColor,
     width,
     height,
@@ -55,7 +41,7 @@ const LargeSquare: React.FC<LargeSquareProps> = ({ children, bgColor, width, hei
   };
 
   return (
-    <div className={style.Sqaure} style={inlineStyle}>
+    <div className={style.Square} style={inlineStyle}>
       {children}
     </div>
   );
