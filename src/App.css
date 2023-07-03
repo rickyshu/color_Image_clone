@@ -1,0 +1,30 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .wrapper {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.box {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quadrant {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  outline: none;
+}
