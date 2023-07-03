@@ -13,22 +13,30 @@ interface LargeSquareProps {
   translate?: string;
   children?: React.ReactNode;
   zIndex?: string;
+  borderRight?: string;
+  borderLeft?: string;
+  borderTop?: string;
+  borderBottom?: string;
 }
 
 interface InlineStlye {
   backgroundColor: string | undefined;
-  width?: number | undefined;
-  height?: number | undefined;
-  position?: "static" | "relative" | "absolute" | undefined;
-  top?: string | undefined;
-  bottom?: string | undefined;
-  right?: string | undefined;
-  left?: string | undefined;
-  translate?: string | undefined;
-  zIndex?: string | undefined;
+  width: number | undefined;
+  height: number | undefined;
+  position: "static" | "relative" | "absolute" | undefined;
+  top: string | undefined;
+  bottom: string | undefined;
+  right: string | undefined;
+  left: string | undefined;
+  translate: string | undefined;
+  zIndex: string | undefined;
+  borderRight: string | undefined;
+  borderLeft: string | undefined;
+  borderTop: string | undefined;
+  borderBottom: string | undefined;
 }
 
-const LargeSquare: React.FC<LargeSquareProps> = ({ children, bgColor, width, height, zIndex, translate, position, top, bottom, right, left }) => {
+const LargeSquare: React.FC<LargeSquareProps> = ({ children, bgColor, width, height, zIndex, translate, position, top, bottom, right, left, borderRight, borderLeft, borderBottom, borderTop }) => {
   const inlineStyle: InlineStlye = {
     backgroundColor: bgColor,
     width,
@@ -40,6 +48,10 @@ const LargeSquare: React.FC<LargeSquareProps> = ({ children, bgColor, width, hei
     left,
     translate,
     zIndex,
+    borderRight,
+    borderLeft,
+    borderBottom,
+    borderTop,
   };
 
   return (

@@ -5,6 +5,9 @@ import Square from "./components/largeSquare/Square";
 import "./App.css";
 
 function App() {
+  const borderLine = "3px solid black";
+  const innerSquareSize = 143.23;
+  const outterSquareSize = 291.78;
   return (
     <>
       <div className="container">
@@ -12,20 +15,20 @@ function App() {
           <div className="box">
             <Square>
               <div className="quadrant">
-                <Square />
-                <Square bgColor="#f91aff" />
-                <Square bgColor="#f91aff" />
+                <Square borderBottom={borderLine} />
+                <Square bgColor="#f91aff" borderLeft={borderLine} borderRight={borderLine} />
+                <Square bgColor="#f91aff" borderBottom={borderLine} />
               </div>
             </Square>
             <Square bgColor="black">
               <div className="quadrant">
-                <Square bgColor="#001fff" position="absolute" top="50%" left="50%" translate="-50% -50% " zIndex="1" />
-                <Square bgColor="#3fffff" position="absolute" bottom="0" right="0" />
+                <Square bgColor="#001fff" position="absolute" top="50%" left="50%" translate="-50% -50% " zIndex="1" borderBottom={borderLine} borderLeft={borderLine} borderRight={borderLine} borderTop={borderLine} />
+                <Square bgColor="#3fffff" position="absolute" bottom="0" right="0" translate="-0.3% 0%" borderBottom={borderLine} />
               </div>
             </Square>
             <Square bgColor="black">
               <div className="quadrant">
-                <Square bgColor="white" position="absolute" top="50%" left="50%" translate="-50% -50%" zIndex="1" />
+                <Square bgColor="white" position="absolute" top="50%" left="50%" translate="-49% -51.8%" zIndex="1" borderRight={borderLine} borderTop={borderLine} />
               </div>
             </Square>
             <Square bgColor="#fffe00">
@@ -33,10 +36,10 @@ function App() {
             </Square>
           </div>
           <div>
-            <Square width={289} height={289} bgColor="#40fe00" position="absolute" top="50%" left="50%" translate="-50% -50%">
+            <Square width={outterSquareSize} height={outterSquareSize} bgColor="#40fe00" position="absolute" top="50%" left="50%" translate="-49.2% -50%" borderTop={borderLine} borderRight={borderLine} borderLeft={borderLine} borderBottom={borderLine}>
               <div className="quadrant">
-                <Square bgColor="#f90000" position="absolute" top="25%" left="0" />
-                <Square bgColor="white" position="absolute" bottom="0" left="24%" />
+                <Square width={innerSquareSize} height={innerSquareSize} bgColor="#f90000" position="absolute" top="25%" left="0" borderTop={borderLine} borderRight={borderLine} borderBottom={borderLine} />
+                <Square width={innerSquareSize} height={innerSquareSize} bgColor="white" position="absolute" bottom="0" left="24%" borderLeft={borderLine} borderTop={borderLine} borderRight={borderLine} />
               </div>
             </Square>
           </div>
